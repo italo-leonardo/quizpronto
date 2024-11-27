@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Versus</title>
+    <link rel="stylesheet" href="./output.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <section class="bg-slate-500 flex justify-center items-center min-h-screen">
+        <div class="bg-slate-100 h-96 w-1/2 text-center content-center">
+            <h1 class="text-red-500 p-5">Senhor dos Anéis - Versus</h1>
+            <div id="container-inicial" class="text-center">
+                <button id="botao-iniciar" onclick="iniciarQuiz()">Iniciar Quiz</button>
+            </div>
+            <div id="container-quiz" style="display:none;">
+                <div id="vez-jogador">Vez do Jogador 1</div>
+                <div id="pergunta"></div>
+                <div class="options p-3">
+                    <button class="opcao" onclick="selecionarResposta(0)"></button>
+                    <button class="opcao" onclick="selecionarResposta(1)"></button>
+                    <button class="opcao" onclick="selecionarResposta(2)"></button>
+                    <button class="opcao" onclick="selecionarResposta(3)"></button>
+                </div>
+                <button id="botao-proxima" onclick="proximaPergunta()" disabled>Próxima Pergunta</button>
+            </div>
+            <div id="container-resultado" style="display:none;">
+                <h2>Resultados</h2>
+                <p>Jogador 1: <span id="pontuacao-jogador1">0</span></p>
+                <p>Jogador 2: <span id="pontuacao-jogador2">0</span></p>
+                <h3 id="vencedor"></h3>
+                <p id="tempo"></p>
+                <button id="botao-reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
